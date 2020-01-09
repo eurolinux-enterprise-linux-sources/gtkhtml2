@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>GtkHtml2 css support</title>
+
+<style type="text/css">
+
+table { border-spacing: 0;
+         border: thick black outset }
+
+ tr { border-bottom: thin solid #999999 }
+ td,th { padding: 1px 4px}
+ thead { background-color: #6666ff;
+         text-align: left;
+         font-size: 120%; }
+
+ tbody { background-color: lightgray}
+ td.supported { background-color: green }
+ td.supported:before { content: "Supported" }
+ td.unsupported { background-color: red}
+ td.unsupported:before { content: "Unsupported" }
+ td.partial { background-color: yellow}
+ td.partial { background-color: yellow}
+ td.partial:before { content: "Partially supported" }
+ td.css1:before { content: "CSS1" }
+ td.css2:before { content: "CSS2" }
+ p.note { float:left; background-color:yellow}
+ p.note:befor { content: "Note: " }
+</style>
+
+</head>
+
+<body bgcolor="white">
+<h1><a href="http://www.people.fas.harvard.edu/~dbaron/css/test/list">David Baron's</a> great css tests</h1>
+<p>
+Updated 2001-03-22
+</p>
+<table>
+<!-- Header begin -->
+  <thead>
+  <tr>
+    <th>Test</th><th>Note</th>
+  </tr>
+  </thead>
+<!-- Header end -->
+
+<!-- Body begin -->
+  <tbody>
+<!--
+  <tr><td><a href="">
+      </a></td><td>Looks ok</td></tr>
+-->
+  <tr><td><a href="http://www.people.fas.harvard.edu/~dbaron/css/test/lenunit">
+      Absolute Lengths Unit Tests</a></td><td>Looks ok</td></tr>
+
+  <tr><td><a href="http://www.people.fas.harvard.edu/~dbaron/css/test/parsing">
+      4.1.1 CSS Parsing Test - some tests that should be in section 7.1 of the test suite</a></td><td>Looks ok</td></tr>
+
+  <tr><td><a href="http://www.people.fas.harvard.edu/~dbaron/css/test/sec414">
+      9.5.1 My original CSS1 section 4.1.4 test</a></td><td>Looks ok</td></tr>
+
+  <tr><td><a href="http://www.people.fas.harvard.edu/~dbaron/css/test/unitless">
+      4.2, 4.3.2 Uniteless Lengths Test</a></td><td>Looks ok</td></tr>
+
+  <tr><td><a href="http://www.people.fas.harvard.edu/~dbaron/css/test/inherit">
+      6.4.1 CSS inherit Test</a></td><td>Looks ok</td></tr>
+
+  <tr><td><a href="http://www.people.fas.harvard.edu/~dbaron/css/test/sec060402">
+      6.4.2 Test of !important grammar</a></td><td>Looks ok</td></tr>
+      
+  <tr><td><a href="http://www.people.fas.harvard.edu/~dbaron/css/test/sec060403b">
+      6.4.3 Inline style specificity test</a></td><td>Looks ok</td></tr>
+      
+  <tr><td><a href="http://www.people.fas.harvard.edu/~dbaron/css/test/specific">
+      6.4.3 Specificity Base Test</a></td><td>Looks ok</td></tr>
+      
+  <tr><td><a href="http://www.people.fas.harvard.edu/~dbaron/css/test/margtest">
+      8.3 Zero Margins Test</a></td><td>Looks ok</td></tr>
+      
+  <tr><td><a href="http://www.people.fas.harvard.edu/~dbaron/css/test/shortbox">
+      8, 1.3.3 Shorthand Box Properties Test</a></td><td>Looks ok</td></tr>
+      
+  <tr><td><a href="http://www.people.fas.harvard.edu/~dbaron/css/test/shortbox2">
+      8, 1.3.3 Shorthand Box Properties Test 2</a></td><td>Looks ok</td></tr>
+      
+  <tr><td><a href="http://www.people.fas.harvard.edu/~dbaron/css/test/sec090201">
+      9.2.1 Block boxes</a></td><td>Looks ok</td></tr>
+
+  <tr><td><a href="http://www.people.fas.harvard.edu/~dbaron/css/test/floatpos">
+      9.5.1 Float position test</a></td><td>Looks ok</td></tr>
+
+  <tr><td><a href="http://www.people.fas.harvard.edu/~dbaron/css/test/floatpos2">
+      9.5.1 Float position test2</a></td><td>Looks ok</td></tr>
+
+  <tr><td><a href="http://www.people.fas.harvard.edu/~dbaron/css/test/sec0907">
+      9.7 Relationships between display, position, and float.</a></td><td>Looks ok</td></tr>
+
+  <tr><td><a href="http://www.people.fas.harvard.edu/~dbaron/css/test/sec100303">
+      10.3.3 Widths and margins of block-level, non-replaced elements</a></td><td>Looks ok</td></tr>
+
+  <tr><td><a href="http://www.people.fas.harvard.edu/~dbaron/css/test/sec1102a">
+      11.2a The visibility property</a></td><td>Looks ok</td></tr>
+
+  <tr><td><a href="http://www.people.fas.harvard.edu/~dbaron/css/test/sec170502">
+      17.5.2 table-layout: fixed</a></td><td>Looks ok</td></tr>
+      
+  </tbody>
+<!-- body end -->
+</table>
+
+</body>
+</html>

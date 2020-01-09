@@ -1,0 +1,81 @@
+<html>
+<head>
+<title>gtkhtml2 test suite: tables.html</title>
+<style type="text/css">
+   body  { background-color: white; color: black; border: solid 2px black }
+   table { width: 50%; background-color: red; border: outset; margin: 10px }
+   td { vertical-align: bottom; border: inset 2px; }
+   caption { background-color: aaffaa }
+</style>
+</head>
+<body>
+
+  <h1>Inline Table test:</h1>
+  <div>
+  Some text
+  <table style="display: inline-table" border="4">
+    <tr>
+      <td>Cell 1</td><td>Cell 2</td>
+    </tr>
+  </table>
+  some more text
+  </div>
+  <h1>Table tests:</h1>
+
+  <table CELLSPACING="0">
+    <tbody>
+    <caption>This is the table caption</caption>
+    <tr style="background-color: aaaaff">
+      <td>Cell 3<br>line 2<br>line 3</td><td>Cell 4</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+      <td>Cell 5</td><td>Cell 6</td>
+    </tr>
+    </tfoot>
+    <thead>
+    <tr>
+      <td style="width: 200px">Cell 1</td><td>Cell 2</td>
+    </tr>
+    </thead>
+  </table>
+  <h1>Same but rtl and caption-side:bottom</h1>
+  <table CELLSPACING="0" DIR="rtl">
+    <caption style="caption-side:bottom">This is the table caption</caption>
+    <tbody>
+    <tr style="background-color: aaaaff">
+      <td>Cell 3<br>line 2<br>line 3</td><td>Cell 4</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+      <td>Cell 5</td><td>Cell 6</td>
+    </tr>
+    </tfoot>
+    <thead>
+    <tr>
+      <td style="width: 200px">Cell 1</td><td>Cell 2</td>
+    </tr>
+    </thead>
+  </table>
+
+  <h1>table-layout: fixed</h1>
+  <p>
+    This table uses "table-layout: fixed" and the middle column should always be 200px wide and the other two colums
+    should divide the rest of the space between them. The tables also has "borders-pacing:10px 20px"
+  </p>
+  <table style="width: 100%; table-layout: fixed; border-spacing: 10px 20px">
+    <tr>
+      <td>Cell 1</td><td style="width: 200px">Cell 2</td><td>Cell 3</td>
+    </tr>
+    <tr>
+      <td>Cell_4_ssssssssssssssssssssssssssssssssss</td><td>Cell 5</td><td>Cell 6</td>
+    </tr>
+  </table>
+
+ </body>
+</html>
+
+
+

@@ -1,0 +1,173 @@
+<html>
+  <head>
+    <title>jborg test page</title>
+    <style type="text/css">
+      body       { background-color: yellow; padding: 0px}
+      h1         { margin-top: 20px; margin-bottom: 10px }
+      span.rtl   { unicode-bidi: bidi-override; direction: rtl; color: red }
+      div.lfloat { float: left; background-color: blue;
+                   width: 200px; height: 50px; border: medium solid black }
+      div.rfloat { float: right; background-color: red;
+                   width: 200px; height: 50px; border: medium solid black }
+     h1.content:before { color: green; content: "before works!" }
+     h1.content:after { color: green; content: "after works!" }
+     a:before    { color: red; content: "link begin<" }
+     a:after    { color: red; content: ">link end" }
+     h1:hover { color: red; background-color: green; border: thick solid black}
+     a:hover { color: red; background-color: yellow}
+     a:link { font-size: 500%}
+     .hoho:hover {outline: dashed 2px invert }
+   </style>
+  </head>
+
+<body>
+
+  <h1>Object test</h1>
+
+  <object classid="gtkhtml2:coolwidget">
+  </object>
+
+  <h1>Outline test</h1>
+
+  <img class="hoho" src="logo.png">
+  <div style="width: 200px; height: 200px; background-color: yellow; outline: red 3px dotted">
+  Bar
+  </div>
+  <span class="hoho">
+  Bar ashd  aksdkasdj askjdh aksjd hasld akjshdakjsld lkjsah dalkjsdh kaljsh dkah dakj dshkasd
+  </span>
+
+  <h1>Form test</h1>
+
+  <form action="jborg.html" method="get">
+  <select name="select" multiple size="3">
+    <option>Test1</option>
+    <option value="test2">Test2</option>
+    <option selected value="test3">Test3</option>
+    <option>Test4</option>
+  </select>
+  <p>
+  <select name="select2">
+    <option>Test1</option>
+    <option value="test2">Test2</option>
+    <option selected value="test3">Test3</option>
+    <option>Test4</option>
+  </select>
+  <br>
+  Foo<input name="name" style="font-size: 30pt" type="text" value="Jonas Borgström">Bar
+  <br>
+  <textarea name="name" type="textarea" rows="4" cols="50">This is a textarea</textarea>
+  <br>
+  <input name="password" type="password">
+  <br>
+  <input name="checkbox" type="checkbox">
+  <br>
+  <input name="hidden1" value="hiddenvalue" type="hidden"><br>
+  <input name="radio1" type="radio">Foo<br>
+  <input name="radio1" type="radio">Bar<br>
+  <input name="radio1" checked type="radio" value="ikryssad">
+  <hr>
+  <input name="radio2" type="radio" value="1"><br>
+  <input name="radio2" type="radio" value="2"><br>
+  <input checked name="radio2" type="radio" value="3">
+  <br>
+  <br><input type="submit"><input type="reset"><br>
+  </form>
+
+  <h1>Border on inline blocks</h1>
+  <div style="background-color: white; border: thick solid black; padding: 10px; line-height: 200%">
+  <span style="background-color: yellow; border: thick solid blue">
+  abc def ghi jkl mno pqr stu vwx yz
+  abc def ghi jkl mno pqr stu vwx yz
+  abc def ghi jkl mno pqr stu vwx yz
+  abc def ghi jkl mno pqr stu vwx yz
+  </span>
+  </div>
+
+  <h1>font-family: test</h1>
+    <div style="font-family: serif">font-family: serif</div>
+    <div style="font-family: sans-serif">font-family: sans-serif</div>
+    <div style="font-family: cursive">font-family: cursive</div>
+    <div style="font-family: fantasy">font-family: fantasy</div>
+    <div style="font-family: monospace">font-family: monospace</div>
+
+    <h1>Clear test</h1>
+    <div class="lfloat">
+      This should be a float
+    </div>
+    <div class="rfloat">
+      This should be a float
+    </div>
+
+    <p style="clear: both">
+      This should be below the floats ("clear: both")
+    </p>
+    <h1 class="content">Pseudo selector test</h1>
+    <p>
+      Some text, please visit <a href="http://www.gtkhtml.org">our homepage</a>. Thanks!
+    </p>
+    <h1>margin collaps test</h1>
+    <div style="margin: 0px 0px 50px 0px; border: thick solid black">block_1</div>
+    <div style="margin: 50px 0px 0px 0px; border: thick solid black">block 2</div>
+
+    <h1>text-align test</h1>
+    <div style="text-align: left">
+      This text should be left aligned.
+    </div>
+    <div style="text-align: center">
+      This text should be centerd.
+    </div>
+    <div style="text-align: right">
+      This text should be right aligned.
+    </div>
+    <div DIR="ltr">
+      This text is DIR="ltr". So it should be left aligned.
+    </div>
+    <div DIR="rtl">
+      This text is DIR="rtl". So it should be right aligned.
+    </div>
+
+    <h1>Float test:</h1>
+
+    <h1>Paragraph test:</h1>
+
+    <div class="lfloat">
+      This should be a float
+    </div>
+    <div class="rfloat">
+      This should be a right float
+    </div>
+    <div class="lfloat">
+      This should be a float2
+    </div>
+    <div class="rfloat">
+      This should be a right float2
+    </div>
+    <p>
+      This is the beginning of a new paragraph
+      <br />
+      This is the end of this paragraph
+    </p>
+
+<h1>BIDI test:</h1>
+
+    <p DIR="rtl" style="background-color: yellow">
+      <span class="rtl">Foo1 </span>
+      <span class="rtl">Foo2 </span>
+      <span class="rtl">Foo3 </span>
+      <span DIR="ltr" style="color: green">
+        <span>Hej1 </span>
+        <span class="rtl" style="color: blue">bar1 </span>
+        <span class="rtl" style="color: blue">bar2 </span>
+        <span>Hej2 </span>
+        <span>Hej3 </span>
+      </span>
+      <span class="rtl">Foo4 </span>
+      <span class="rtl">Foo5 </span>
+    </p>
+foo bar baz
+</body>
+</html>
+
+
+

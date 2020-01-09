@@ -1,0 +1,87 @@
+<html>
+<head>
+<title>gtkhtml2 test suite: test7.html</title>
+<!--
+<style type="text/css">
+body,span {
+font-size: 14pt;
+font-family: helvetica, arial;
+}
+</style>-->
+</head>
+<body style="font-size:18">
+<H1>Welcome to gtkhtml2 (H1)</H1>
+<H2>Welcome to gtkhtml2 (H2)</H2>
+<H3>Welcome to gtkhtml2 (H3)</H3>
+<H4>Welcome to gtkhtml2 (H4)</H4>
+<H5>Welcome to gtkhtml2 (H5)</H5>
+<H6>Welcome to gtkhtml2 (H6)</H6>
+<div style="border:solid;border-width:1;border-color:blue;line-height:300%">
+gtkhtml2 should now support the
+<span style="color:red"> vertical-align: </span>
+<span style="vertical-align:baseline">baseline</span>
+<span style="vertical-align:top">top, </span>
+<span style="vertical-align:middle">middle, </span>
+<span style="vertical-align:bottom">bottom </span>
+css property.
+</div>
+<div>
+Gtkhtml2 now has css <span style="font-weight:bold">font-weight: <span style="font-size:200%">bold</span></span>.
+</div>
+<div style="font: bold helvetica oblique 24">
+Gtkhtml2 now has css <span style="font-style:italic">font-style: italic</span>.
+</div>
+<div>
+Gtkhtml2 now has css <span style="font-style:italic">font-style: italic</span>.
+</div>
+<div>
+Gtkhtml2 now has css <span style="font-style:oblique">font-style: oblique</span>.
+</div>
+<p>
+Gtkhtml2 now has some css <span style="color:red">color support</span>. lets test it:
+</p>
+<div style="color:black">Black</div>
+<div style="color:green">Green</div>
+<div style="color:silver">Silver</div>
+<div style="color:lime">Lime</div>
+<div style="float:right;border:solid #666666 thick;border-left-color:#999999;border-bottom-color:#999999;background-color:white;color:navy;width:50%;padding:10px;">
+Note: gtkhtml2 now supports the "<span style="background-color:navy;color:yellow">background-color</span>: xxx" css property.</div>
+
+<div style="color:gray">Gray</div>
+<div style="color:olive">Olive</div>
+<div style="color:white">White</div>
+<div style="color:yellow">Yellow</div>
+<div style="color:maroon">Maroon</div>
+<div style="color:navy">Navy</div>
+<div style="float:right;border:solid #666666 thick;border-left-color:#999999;border-bottom-color:#999999;background-color:#362E45;color:white;width:50%;padding:10px;border-left:solid gray thick">
+Note: This background color should be the same as Helixgnomes default desktop</div>
+
+<div style="color:red">Red</div>
+<div style="color:blue">Blue</div>
+<div style="color:purple">Purple</div>
+<div style="color:teal">Teal</div>
+<div style="color:fuchsia">fuchsia</div>
+<div style="color:aqua">Aqua</div>
+<p>
+A "pre" tag test will follow:
+</p>
+<pre>
+if (html_css_list_get_property (list, "white-space")) {
+        if (strcmp (html_css_list_get_property (list, "white-space"), "normal") == 0)
+                new_box->style_white_space = HTML_WHITE_SPACE_NORMAL;
+					
+	if (strcmp (html_css_list_get_property (list, "white-space"), "pre") == 0)
+                new_box->style_white_space = HTML_WHITE_SPACE_PRE;
+					
+        if (strcmp (html_css_list_get_property (list, "white-space"), "nowrap") == 0)
+                new_box->style_white_space = HTML_WHITE_SPACE_NOWRAP;					
+}
+</pre>
+<P>
+Please visit <a href="http://www.gtkhtml.org/">http://www.gtkhtml.org/</a>.
+</P>
+</body>
+</html>
+
+
+
